@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljeida.VisualStudio.Core", "Aljeida.VisualStudio.Core\Aljeida.VisualStudio.Core.csproj", "{5EA1D767-8B9E-4681-B31C-30DA27FA6547}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C243AB7C-685C-46FC-BE03-3B6D7E27E658}"
+	ProjectSection(SolutionItems) = preProject
+		Aljeida.VisualStudio.vsmdi = Aljeida.VisualStudio.vsmdi
+		IntegrationTests.testsettings = IntegrationTests.testsettings
+		UnitTests.testsettings = UnitTests.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljeida.VisualStudio.YUML", "Aljeida.VisualStudio.YUML\Aljeida.VisualStudio.YUML.csproj", "{10498CA5-115C-4623-8D15-79180CB7722E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljeida.VisualStudio.YUML_IntegrationTests", "Aljeida.VisualStudio.YUML\Aljeida.VisualStudio.YUML_IntegrationTests\Aljeida.VisualStudio.YUML_IntegrationTests.csproj", "{2AB2D1A3-D5AC-45D7-90E0-B0F28E112CC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aljeida.VisualStudio.YUML_UnitTests", "Aljeida.VisualStudio.YUML\Aljeida.VisualStudio.YUML_UnitTests\Aljeida.VisualStudio.YUML_UnitTests.csproj", "{AD1FDF55-BC2B-426D-BEFB-9D98618B1505}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Aljeida.VisualStudio.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EA1D767-8B9E-4681-B31C-30DA27FA6547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA1D767-8B9E-4681-B31C-30DA27FA6547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA1D767-8B9E-4681-B31C-30DA27FA6547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA1D767-8B9E-4681-B31C-30DA27FA6547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10498CA5-115C-4623-8D15-79180CB7722E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10498CA5-115C-4623-8D15-79180CB7722E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10498CA5-115C-4623-8D15-79180CB7722E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10498CA5-115C-4623-8D15-79180CB7722E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB2D1A3-D5AC-45D7-90E0-B0F28E112CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB2D1A3-D5AC-45D7-90E0-B0F28E112CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB2D1A3-D5AC-45D7-90E0-B0F28E112CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB2D1A3-D5AC-45D7-90E0-B0F28E112CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1FDF55-BC2B-426D-BEFB-9D98618B1505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1FDF55-BC2B-426D-BEFB-9D98618B1505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1FDF55-BC2B-426D-BEFB-9D98618B1505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1FDF55-BC2B-426D-BEFB-9D98618B1505}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
