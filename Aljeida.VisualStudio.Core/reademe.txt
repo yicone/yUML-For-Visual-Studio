@@ -1,6 +1,8 @@
 ﻿2012-03-04 编译遇到问题，执行如下命令解决
-D:\Depository\Aljeida.VisualStudio\Aljeida.VisualStudio.Core>sn -i Aljeida.VisualStudio.Core.pfx VS_KEY_241BFDAE86D0490D
+D:\Depository\Aljeida.VisualStudio\Aljeida.VisualStudio.Core>sn -i Aljeida.VisualStudio.Core.pfx <ContainerName>
 
 参考：
 1. http://stackoverflow.com/questions/2815366/cannot-import-the-following-keyfile-blah-pfx-the-keyfile-may-be-password-prote
 2. http://hi.baidu.com/yycmmc/blog/item/9a47a155a3001548564e00f2.html
+
+http://msdn.microsoft.com/zh-cn/library/vstudio/ms247123.aspx

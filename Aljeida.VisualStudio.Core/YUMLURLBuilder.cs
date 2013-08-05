@@ -21,7 +21,7 @@ namespace Aljeida.VisualStudio.Core
         public bool FirstPass { get; set; }
         public List<Relationship> Relationships = new List<Relationship>();
 
-        private StringBuilder _sb;
+        private StringBuilder _sb = new StringBuilder();
 
         public YUMLURLBuilder(IList<CodeElement> codeClasses)
         {
@@ -73,6 +73,10 @@ namespace Aljeida.VisualStudio.Core
             {
                 ces = (codeElement as CodeInterface).Bases;
             }
+            else
+            {
+                return;
+            }
 
             foreach (CodeElement ce in ces)
             {
@@ -115,6 +119,7 @@ namespace Aljeida.VisualStudio.Core
             {
                 ces = (codeElement as CodeInterface).Members;
             }
+            else { return; }
 
             foreach (CodeElement property in ces)
             {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using EnvDTE;
 using EnvDTE80;
 using Microsoft.VisualStudio.Shell;
@@ -11,6 +12,8 @@ namespace Aljeida.VisualStudio.Core
     public class SolutionParser
     {
         private DTE2 _dte;
+        private static List<string> s_subTypeList = new List<string> { "Code", "" };
+
         public SolutionParser()
         {
             _dte = (DTE2)Package.GetGlobalService(typeof(DTE)); ;
@@ -90,7 +93,8 @@ namespace Aljeida.VisualStudio.Core
             {
                 ProjectItem pi = selectedUIHierarchyItem.Object as ProjectItem;
                 Property p = pi.Properties.Item("SubType");
-                if (string.Equals(p.Value, "Code"))
+
+                if (s_subTypeList.Contains(p.Value))
                 {
                     projectItem = pi;
                 }
@@ -102,7 +106,7 @@ namespace Aljeida.VisualStudio.Core
                     UIHierarchyItem temp = selectedUIHierarchyItem.UIHierarchyItems.Item(i);
                     ProjectItem pi = temp.Object as ProjectItem;
                     Property p = pi.Properties.Item("SubType");
-                    if (string.Equals(p.Value, "Code"))
+                    if (s_subTypeList.Contains(p.Value))
                     {
                         projectItem = pi;
                         //Debug.WriteLine(pi.Properties.Item("IsDependentFile").Value == true);
@@ -121,15 +125,25 @@ namespace Aljeida.VisualStudio.Core
             Debug.Assert(codeProjectItem != null);
             Debug.Assert(codeProjectItem.FileCodeModel != null);
 
-            CodeElements ces = codeProjectItem.FileCodeModel.CodeElements;
-            for (int i = 1; i <= ces.Count; i++)
+            if (codeProjectItem.FileCodeModel != null)
             {
-                CodeElement ce = ces.Item(i);
-
-                for (int j = 1; j <= ce.Children.Count; j++)
+                CodeElements ces = codeProjectItem.FileCodeModel.CodeElements;
+                for (int i = 1; i <= ces.Count; i++)
                 {
-                    CodeElement ce2 = ce.Children.Item(j);
-                    codeElementList.Add(ce2);
+                    CodeElement ce = ces.Item(i);
+                    if (ce.IsCodeType)
+                    {
+                        codeElementList.Add(ce);
+                    }
+
+                    for (int j = 1; j <= ce.Children.Count; j++)
+                    {
+                        CodeElement ce2 = ce.Children.Item(j);
+                        if (ce2.IsCodeType)
+                        {
+                            codeElementList.Add(ce2);
+                        }
+                    }
                 }
             }
 
