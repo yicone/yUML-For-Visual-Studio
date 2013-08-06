@@ -160,6 +160,7 @@
   <ItemGroup>
     <VSCTCompile Include="Aljeida.VisualStudio.YUML.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
+      <SubType>Designer</SubType>
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
@@ -169,13 +170,17 @@
     <Content Include="icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="snapshot1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="snapshot10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="snapshot11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="yUML_square.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -186,12 +191,6 @@
     <Content Include="snapshot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Aljeida.VisualStudio.Core\Aljeida.VisualStudio.Core.csproj">
-      <Project>{5EA1D767-8B9E-4681-B31C-30DA27FA6547}</Project>
-      <Name>Aljeida.VisualStudio.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
@@ -214,6 +213,12 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aljeida.VisualStudio.Core\Aljeida.VisualStudio.Core.csproj">
+      <Project>{5ea1d767-8b9e-4681-b31c-30da27fa6547}</Project>
+      <Name>Aljeida.VisualStudio.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <UseCodebase>true</UseCodebase>

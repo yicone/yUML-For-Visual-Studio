@@ -1,18 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="Aljeida.VisualStudio.YUML..d3caa83b-9305-4e41-83cf-4e769fef2433" Version="0.93" Language="en-US" Publisher="yicone" />
+    <Identity Id="Aljeida.VisualStudio.YUML..d3caa83b-9305-4e41-83cf-4e769fef2433" Version="0.94" Language="en-US" Publisher="yicone" />
     <DisplayName>yUML Extension</DisplayName>
     <Description xml:space="preserve">Use of http://yuml.me to generate Class Diagram from the selected code file in Visual Studio Solution Explorer. </Description>
     <MoreInfo>http://visualstudiogallery.msdn.microsoft.com/8dba2cec-c3c4-4782-950f-8396036635fc</MoreInfo>
     <GettingStartedGuide>http://visualstudiogallery.msdn.microsoft.com/8dba2cec-c3c4-4782-950f-8396036635fc</GettingStartedGuide>
     <Icon>yUML_square.png</Icon>
-    <PreviewImage>snapshot1.png</PreviewImage>
+    <PreviewImage>snapshot10.png</PreviewImage>
     <Tags>UML, class diagram, yUML, class relation, prototype design, depth of inheritance</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="10.0" />
-    <InstallationTarget Version="10.0" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="12.0" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="10.0" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="12.0" Id="Microsoft.VisualStudio.Premium" />
+    <InstallationTarget Version="10.0" Id="Microsoft.VisualStudio.Ultimate" />
+    <InstallationTarget Version="11.0" Id="Microsoft.VisualStudio.Ultimate" />
+    <InstallationTarget Version="12.0" Id="Microsoft.VisualStudio.Ultimate" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.0" />
