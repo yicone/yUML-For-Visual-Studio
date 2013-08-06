@@ -12,7 +12,7 @@ namespace Aljeida.VisualStudio.Core
     public class SolutionParser
     {
         private DTE2 _dte;
-        private static List<string> s_subTypeList = new List<string> { "Code", "" };
+        //private static List<string> s_subTypeList = new List<string> { "Code", "Component", "" };
 
         public SolutionParser()
         {
@@ -91,26 +91,15 @@ namespace Aljeida.VisualStudio.Core
             // 如果选中项没有子元素
             if (selectedUIHierarchyItem.UIHierarchyItems.Count == 0)
             {
-                ProjectItem pi = selectedUIHierarchyItem.Object as ProjectItem;
-                Property p = pi.Properties.Item("SubType");
-
-                if (s_subTypeList.Contains(p.Value))
-                {
-                    projectItem = pi;
-                }
+                projectItem = selectedUIHierarchyItem.Object as ProjectItem;
             }
             else
             {
                 for (int i = 1; i <= selectedUIHierarchyItem.UIHierarchyItems.Count; i++)
                 {
                     UIHierarchyItem temp = selectedUIHierarchyItem.UIHierarchyItems.Item(i);
-                    ProjectItem pi = temp.Object as ProjectItem;
-                    Property p = pi.Properties.Item("SubType");
-                    if (s_subTypeList.Contains(p.Value))
-                    {
-                        projectItem = pi;
-                        //Debug.WriteLine(pi.Properties.Item("IsDependentFile").Value == true);
-                    }
+                    projectItem = temp.Object as ProjectItem;
+                    //Debug.WriteLine(pi.Properties.Item("IsDependentFile").Value == true);
                 }
             }
 
